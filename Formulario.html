@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="formulario.css">
+</head>
+<body>
+    <!-- O que é um formulario? -->
+    <!--    - Forms tem o papel de receber os dados do usuario e enviar para um servidor;
+            - Podemos validar dados;
+            - As tags mais utilizadas são: form, label, input;
+            - A tag form cria o formulario e o delimita; 
+            - Label descreve os inputs;
+            - e o input é a teg que inserimos dados, temos tipos: number, email, text e etc; 
+    -->
+
+    <!-- Atributos da tag form  
+            - A tag form tem dois atibutos geralmente, que são;
+            - action: o arquivo/pagina que os daods serão enviados; 
+            - method: GET ou POST, receber dado ou enviar dado; 
+            - Não os exploramos em detalhes pois fazem parte do back-end, ou seja, estão fora do escopo deste curso; 
+    -->
+   <h2>Formularios Html</h2>
+   <!-- 1 - Primeiro formulario -->
+   <!-- 2 - Atributos do formulario -->
+   <form action="register.php" method="get">
+     <div>
+        <label>Nome:</label>
+        <input type="text">
+     </div>
+     <div>
+        <!-- 3 - atributo name -->
+        <!-- 4 - atributo label -->
+        <label for="age">idade:</label>
+        <input type="text" name="age">
+     </div>
+     <!-- 6 - Select -->
+     <div>
+      <label for="job">Selecione a sua profissão</label>
+      <select name="job">
+         <option value="Programador">Programador</option>
+         <option value="Administrador">Administrador</option>
+         <option value="Medico">Medico</option>
+      </select>
+     </div>
+     <!-- 7 - Atributo Selected -->
+     <div>
+      <label for="contrato">Voce leu os termos do contrato?</label>
+      <select name="contrato" id="">
+         <option value="sim">Sim</option>
+         <option value="nao" selected>Não</option>
+      </select>
+     </div>
+      <!-- 8 - multipla opções -->
+      <div>
+         <label for="items">Selecione os itens desejados</label>
+         <select name="items" multiple>
+            <option value="feijão">feijão</option>
+            <option value="maça">maça</option>
+            <option value="arroz">arroz</option>
+            <option value="cafe">cafe</option>
+         </select>
+      </div>
+      <!-- 9 - Textarea -->
+      <div>
+         <label for="comentarios">Sua opnião:</label>
+         <textarea name="comentarios"></textarea>
+      </div>
+     <!-- 5 - Botao para enviar -->
+     <input type="submit" value="Enviar">
+   </form>
+</body>
+</html>
